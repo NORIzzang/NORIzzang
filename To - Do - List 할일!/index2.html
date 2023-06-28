@@ -1,0 +1,86 @@
+<!--아무것도 적지 않고 '추가하기'버튼을 누르면 리스트에 추가되지 않음, 할 일을 입력하세요 문구 출력-->
+<!--입렭창에 할 일을 입력하고 '추가하기' 버튼을 누르면 리스트에 할 일을 추가-->
+<!--입력창에 할 일을 입력하고 엔터키 누르면 리스트에 할 일 추가-->
+<!--체크박스 클릭 시 줄 긋기-->
+<!--'완료' 버튼 클릭 시 리스트에서 할 일 삭제하기 -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 노리 To do list </title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const input = document.querySelector('#todo')
+            const addButton = document.querySelector('#add-button')
+            const todoList = document.querySelector('#todo-list')
+            const alert = document.querySelector('span')
+
+      		// '추가하기' 버튼 익명 화살표 함수 
+            const addTodo = () => {
+                if (input.value !== '') {
+                    const item = document.createElement('div')
+      		    // 체크박스
+                    const checkbox = document.createElement('input')
+                    checkbox.type='checkbox'
+     		    // text
+                    const text = document.createElement('span');
+      		    // 제거하기 버튼
+                    const deleteButton = document.createElement('button')
+                    deleteButton.textContent="완료"
+
+                    text.textContent = input.value
+                    input.value=''
+                
+                    item.appendChild(checkbox)
+                    item.appendChild(text)
+                    item.appendChild(deleteButton)
+                    todoList.appendChild(item)
+
+			// 체크박스 이벤트 리스너
+                    checkbox.addEventListener('change', (event) =>{ 
+                        if (event.currentTarget.checked)
+                        {
+                            text.style.textDecoration='line-through'
+                        }
+                        else {
+                            text.style.textDecoration='none'
+                        }
+                    })
+
+      		    // 제거하기 버튼 클릭 이벤트 리스너
+                    deleteButton.addEventListener('click', (event) => {
+                        todoList.removeChild(event.currentTarget.parentNode)
+                    })
+                    input.value =''
+                    alert.textContent = ''
+                }
+                else
+                    alert.textContent = '할 일을 입력하세요!'
+            }
+
+            addButton.addEventListener('click', addTodo)
+      
+      		// 할 일 입력창에서 enter key가 눌렸을 때
+            input.addEventListener('keypress', (event) => {
+                const ENTER = 13
+                if (event.keyCode === ENTER)
+                    addTodo();
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <h1> 할 일이 매일매일 산더미인 <br> 바쁘다 바빠 현대사회를 오늘도 열심히 <br> 살아가는 나</h1>
+    <span></span><br>
+    <input id="todo">
+    <button id="add-button">추가 하기</button>
+    <div id="todo-list"></div>
+</body>
+</html>
