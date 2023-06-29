@@ -42,16 +42,4 @@ class Calculator:
 cal1 = Calculator() # Calculator 클래스의 인스턴스 cal1 생성
 cal2 = Calculator() # Calculator 클래스의 인스턴스 cal2 생성
 
-###################################################################################################
-
-###   사칙연산 클래스 만들기   ###
-
-class FourCal:
-    def setdata(self,first,second):
-        self.first = first
-        self.second = second
-
-a = FourCal()
-a.setdata(4,2)
-
 
