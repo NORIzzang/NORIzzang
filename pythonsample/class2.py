@@ -39,3 +39,4 @@ print("뺄셈 결과:", result_sub)
 # 나눗셈 수행
 result_div = calculator.div()
 print("나눗셈 결과:", result_div)
+
