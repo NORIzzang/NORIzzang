@@ -1,10 +1,9 @@
 📖 개인 공부 📖
 
 - Azure 900 (cloud)
-- HTML, CSS, Javascript
-- Python
+- Python 우선 집중 -\_-
 
 🏫 2학기 수업 🏫
 
-- C++ 언어 예습하기
 - 전 과목 🅰+ 맞기
+- > > > > 망했다 . . . .

@@ -1,5 +1,6 @@
 # 크롤링
 from bs4 import BeautifulSoup
+# cmd 창에서 먼저 pip install bs4 를 해야함 다운 및 업그레이드 후 실행 시 정상 동작 됨
 
 
 html = """
