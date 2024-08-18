@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나누리_202334-153105</title>
+  </head>
+  <body>
+    <h1>"HTML5&nbsp;&nbsp;&nbsp;웹&nbsp;&nbsp;&nbsp;프로그래밍"</h1>
+    <mark><b>"컴퓨터과학과"</b></mark>
+    <p>나의 수강과목 학습 진행률</p>
+    <style>
+      ul {
+        list-style-type: circle;
+      }
+      meter {
+        position: relative;
+      }
+      meter:hover::before {
+        content: attr(title);
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 4px;
+        background-color: rgba(255, 255, 255, 1);
+        color: #000;
+        border: 2px solid black;
+        font-size: 14px;
+        border-radius: 5px;
+        white-space: nowrap;
+      }
+    </style>
+    <ul>
+      <li>
+        한국사의이해<meter
+          max="100"
+          value="30"
+          title="나의 학습진도는 30%"
+        ></meter>
+      </li>
+      <li>
+        생명과환경<meter
+          max="100"
+          value="40"
+          title="나의 학습진도는 40%"
+        ></meter>
+      </li>
+      <li>
+        사진의이해<meter max="100" value="5" title="나의 학습진도는 5%"></meter>
+      </li>
+      <li>
+        Java프로그래밍<meter
+          max="100"
+          value="20"
+          title="나의 학습진도는 20%"
+        ></meter>
+      </li>
+      <li>
+        HTML5 웹 프로그래밍<meter
+          max="100"
+          value="16"
+          title="나의 학습진도는 16%"
+        ></meter>
+      </li>
+      <li>
+        데이터베이스시스템<meter
+          max="100"
+          value="70"
+          title="나의 학습진도는 40%"
+        ></meter>
+      </li>
+    </ul>
+    <figure>
+      <img
+        src="https://mblogthumb-phinf.pstatic.net/MjAyMDAzMTBfMTcz/MDAxNTgzODE2MjA3NDIy.bh9jfxcOWox6Ne0-EOUnAJkXirQQoyOlAP21fZEljZgg.RxoDoChPBaZk_pm1fxoqry9q09KxLs93LIxv66b1Lxwg.PNG.yfhyzumopvv/20200310_133800_1.png?type=w800"
+        alt="인어공주"
+        width="400"
+        height="500"
+      />
+      <figcaption>내가 제일 좋아하는 인어공주 사진</figcaption>
+    </figure>
+  </body>
+</html>
